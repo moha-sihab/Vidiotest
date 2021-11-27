@@ -24,7 +24,6 @@ import com.sihabudin.vidiotest.workmanager.DownloadWorker
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var viewModel: EpisodeViewModel
-//    private var listEpisode: ArrayList<Episode> = ArrayList(0)
     private var defaultListEpisode:  ArrayList<Episode> = ArrayList(0)
     private var episodeAdapter = EpisodeAdapter(defaultListEpisode,{episode -> onDownload(episode)})
     override fun onCreate(savedInstanceState: Bundle?) {
