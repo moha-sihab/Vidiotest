@@ -12,6 +12,7 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkManager.*
+import com.google.android.material.snackbar.Snackbar
 import com.sihabudin.vidiotest.adapter.EpisodeAdapter
 import com.sihabudin.vidiotest.databinding.ActivityMainBinding
 import com.sihabudin.vidiotest.enum.DownloadStatus
@@ -80,6 +81,12 @@ class MainActivity : AppCompatActivity() {
                         viewModel.getEpisode().observe(this, Observer {
                             showEpisodeList(it)
                         })
+
+                    Snackbar.make(
+                        findViewById(R.id.idactivitymain),
+                        "Episode ${episode.title} berhasil di download",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
 
                 }
             })
