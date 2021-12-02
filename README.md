@@ -13,7 +13,7 @@ Beberapa kelebihan Work Manager :
 
 Kode di bawah ini adalah prototype, sebuah skenario menggunakan Work Manager untuk proses download.
 
-Pada kondisi yang seharusnya (production), Fungsi VidioSDK.downloadEpisode(episodeId: Long) bisa dipanggil di class DownloadWorker dan proses download akan berlangsung asynchronous.
+Pada kondisi yang seharusnya (production), Fungsi downloadEpisode(episodeId: Long) bisa dipanggil di class DownloadWorker dan proses download akan berlangsung asynchronous.
 Setelah download selesai, kode episode bisa disimpan di database room untuk membantu memberikan kondisi episode mana yang sudah di download atau belum.
 
 
